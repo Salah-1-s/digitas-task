@@ -1,0 +1,12 @@
+button {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.2;
+  }
+}

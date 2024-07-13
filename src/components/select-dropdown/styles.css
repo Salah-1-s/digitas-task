@@ -1,0 +1,122 @@
+.select-input {
+  .select {
+    width: 100%;
+    min-width: 180px;
+
+    .select__control {
+      background: none;
+      border: 1px solid var(--navy-100);
+      box-shadow: none;
+      border-radius: 25px;
+      padding: 12px 21px 12px 24px;
+      cursor: pointer;
+    }
+
+    .select__control:hover,
+    .select__control:focus {
+      border-color: var(--navy-100);
+    }
+
+    .select__input-container {
+      margin: 0;
+      padding: 0;
+    }
+
+    .select__input {
+      pointer-events: none;
+    }
+
+    .select__placeholder,
+    .select__single-value {
+      white-space: nowrap;
+      overflow: hidden;
+      color: var(--navy-100);
+      font-size: 13px;
+      text-overflow: ellipsis;
+    }
+
+    .select__single-value {
+      color: var(--navy-500);
+    }
+
+    .select__indicator-separator {
+      display: none;
+    }
+
+    .select__value-container {
+      flex-wrap: nowrap;
+      padding: 0;
+      text-align: start;
+      text-transform: capitalize;
+    }
+
+    .select__indicator {
+      padding: 0;
+
+      svg {
+        width: 14px;
+      }
+    }
+
+    .select__loading-indicator {
+      color: var(--navy-500);
+    }
+
+    .select__menu {
+      background: var(--white-100);
+      font-size: 13px;
+      padding: 0;
+      z-index: 99999;
+    }
+
+    .select__menu-list {
+      color: var(--navy-500);
+      padding: 0;
+      text-align: start;
+    }
+
+    .select__option {
+      color: var(--navy-500);
+      margin-block: 12px;
+      position: relative;
+      font-size: 13px;
+      font-weight: var(--font-medium);
+      text-transform: capitalize;
+    }
+
+    .select__option--is-focused {
+      background: var(--blue-50);
+      color: var(--navy-500);
+      cursor: pointer;
+    }
+
+    .select__option--is-selected {
+      padding: 8px 12px;
+      background: var(--white-500);
+      color: var(--navy-100);
+    }
+
+    .select__option:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    .select__option:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      inset-inline: 12px;
+      bottom: -12px;
+      height: 1px;
+      background: var(--navy-50);
+    }
+
+    .select--is-disabled {
+      opacity: 0.35;
+    }
+  }
+}
+
+.error {
+  .select__control {
+    border: 1px solid var(--red-600) !important;
+  }
+}

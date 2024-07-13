@@ -1,0 +1,61 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  background: none;
+  resize: none;
+  border: 1px solid var(--navy-100);
+  box-shadow: none;
+  border-radius: 25px;
+  padding: 12px 21px 12px 24px;
+  color: var(--navy-500);
+  -moz-appearance: textfield;
+  &::placeholder {
+    color: var(--navy-100);
+  }
+
+  &.error {
+    border: 1px solid var(--red-600);
+  }
+}
+
+label {
+  font-size: 13px;
+  color: var(--navy-500);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  margin-block: 30px;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--red-600);
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 10px;
+}

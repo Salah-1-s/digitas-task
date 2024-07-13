@@ -1,0 +1,47 @@
+.investment-form {
+  .investment-form__disclaimer {
+    font-size: 13px;
+    margin-block: 30px;
+    color: var(--navy-500);
+    font-weight: var(--font-medium);
+  }
+
+  legend {
+    color: var(--navy-500);
+    font-weight: 500;
+  }
+  .react-tel-input {
+    width: 100%;
+    input {
+      pointer-events: none;
+    }
+  }
+  .flag-dropdown {
+    border-start-start-radius: 25px !important;
+    border-end-start-radius: 25px !important;
+  }
+
+  .selected-flag {
+    border-start-start-radius: 25px !important;
+    border-end-start-radius: 25px !important;
+  }
+
+  .form-control {
+    width: 100% !important;
+    background: none;
+    border: 1px solid var(--navy-100) !important;
+    box-shadow: none;
+    border-radius: 25px !important;
+    padding-block: 21px !important;
+    color: var(--navy-500);
+    &::placeholder {
+      color: var(--navy-100);
+    }
+  }
+
+  .phone-wrapper {
+    display: grid;
+    grid-template-columns: 110px auto;
+    gap: 6px;
+  }
+}
