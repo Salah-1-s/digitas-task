@@ -1,9 +1,14 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import PhoneInput from "react-phone-input-2";
+import { toast } from "react-toastify";
 import GoldButton from "../button";
 import SelectDropdown from "../select-dropdown";
-import { FormInitialData } from "../../interfaces/inputs/investment-form";
-import { InvestmentFormSchema, validatePhone } from "../../utils/investment";
+import { InvestmentFormInitialData } from "../../interfaces/inputs/investment-form";
+import {
+  InvestmentFormSchema,
+  validatePhone,
+  Investment as InvestmentUtils,
+} from "../../utils/investment.utils";
 
 import ErrorIcon from "../../assets/icons/error.svg";
 
@@ -12,11 +17,18 @@ import "./styles.css";
 
 export default function InvestmentForm() {
   const handleSubmitForm = (
-    formData: FormInitialData,
+    formData: InvestmentFormInitialData,
     resetForm: () => void
   ) => {
-    console.log(formData);
-    resetForm();
+    InvestmentUtils.submitInvestmentForm(formData)
+      .then((res) => {
+        toast.success(res.message);
+        resetForm();
+      })
+      /**
+       * Handle this error depending on its type from the BE
+       */
+      .catch((err) => console.error(err));
   };
 
   return (

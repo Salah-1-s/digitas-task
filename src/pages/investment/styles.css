@@ -6,7 +6,7 @@
   padding-inline-end: 32px;
   margin-block: 64px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(2, 1fr);
     flex-direction: row-reverse;
     padding-inline-start: 80px;
@@ -46,6 +46,7 @@
 .investment-page__disclaimer {
   grid-column: span 2;
   margin-block: 24px;
+  font-weight: var(--font-medium);
 }
 
 .investment-page__image {
@@ -61,7 +62,7 @@
     min-width: 36%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1200px) {
     position: absolute;
     width: unset;
     height: unset;

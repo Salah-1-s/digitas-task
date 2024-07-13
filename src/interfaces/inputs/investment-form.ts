@@ -1,6 +1,6 @@
 import { OptionValue } from "../select";
 
-export interface FormInitialData {
+export interface InvestmentFormInitialData {
   fullName: string;
   email: string;
   phoneNumber: string;
